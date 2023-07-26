@@ -1,62 +1,75 @@
 .steps {
-  // .steps__form
-
-  &__form {
-  }
-
   // .steps__numbers
-
   &__numbers {
+    position: relative;
+
     display: flex;
     align-items: center;
-    position: relative;
+
     max-width: 650px;
     margin-bottom: 60px;
   }
 }
 .progress {
   position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: $lightgray;
   z-index: -1;
+  top: 50%;
+  right: 0;
+  left: 0;
+
+  height: 2px;
+
+  background: $lightgray;
 
   // .progress__success
   &__success {
+    position: absolute;
+    right: 0;
+    left: 0;
+
+    height: 2px;
+
+    transition: 0.6s all ease;
+
+    background: $red;
   }
 }
 .step {
   // .step__number
-
   &__number {
     display: flex;
-    justify-content: center;
     align-items: center;
-    border-radius: 100%;
+    flex-shrink: 0;
+    justify-content: center;
+
     width: 50px;
     height: 50px;
     margin-right: 100px;
+
     border: 2px solid $lightgray;
-    flex-shrink: 0;
+    border-radius: 100%;
     background: $white;
 
     &.active__number {
-      background: $red;
+      transition: 1s all ease;
+
       border: transparent;
+      background: $red;
       path {
+        transition: 1s all ease;
+
         fill: $white;
       }
     }
   }
 
   // .step__buttons
-
   &__buttons {
-    margin-top: 80px;
-    gap: 20px;
     display: flex;
+
+    margin-top: 80px;
+
+    gap: 20px;
   }
 }
 .form {
@@ -71,49 +84,42 @@
   }
 
   &__input {
-    display: flex;
     position: relative;
-    border: 1px solid $lightgray;
+
+    display: flex;
+
     max-width: 460px;
+
+    border: 1px solid $lightgray;
 
     .search__input {
       margin-top: 40px;
     }
   }
 }
-.button {
-}
-.prev {
-  // .prev__step
-
-  &__step {
-  }
-}
-.next {
-  // .next__step
-
-  &__step {
-  }
-}
 
 .input {
-  padding: 20px 20px 20px 65px;
   width: 100%;
+  padding: 20px 20px 20px 65px;
+
+  color: $gray;
   outline: none;
-  font-style: normal;
+
   font-size: 18px;
   font-weight: 375;
+  font-style: normal;
   line-height: 20px;
-  color: $gray;
 
   &:focus {
     outline: 1px solid $red;
   }
+
   // .input__img
   &__img {
     position: absolute;
-    left: 30px;
     top: 50%;
+    left: 30px;
+
     transform: translate(0px, -50%);
   }
 }
@@ -126,10 +132,11 @@
 
   // .from__item-title
   &__item-title {
-    font-style: normal;
+    color: $blue;
+
     font-size: 25px;
     font-weight: 494;
+    font-style: normal;
     line-height: 28px;
-    color: $blue;
   }
 }

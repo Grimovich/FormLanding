@@ -1,0 +1,77 @@
+/* Rectangle 50 */
+
+box-sizing: border-box;
+position: absolute;
+width: 460px;
+height: 60px;
+left: calc(50% - 460px / 2 - 530px);
+top: 398px;
+background: #ffffff;
+border: 1px solid #e5e4e1;
+
+/* First Name */
+
+position: absolute;
+width: 76px;
+height: 20px;
+left: calc(50% - 76px / 2 - 657px);
+top: 418px;
+font-family: "Author";
+font-style: normal;
+font-weight: 375;
+font-size: 18px;
+line-height: 20px;
+/* identical to box height */
+
+color: #747887;
+
+/* vuesax/outline/user */
+
+position: absolute;
+width: 20px;
+height: 20px;
+left: calc(50% - 20px / 2 - 720px);
+top: 418px;
+
+/* vuesax/outline/user */
+
+position: absolute;
+width: 20px;
+height: 20px;
+left: 0;
+top: 0;
+
+/* user */
+
+position: absolute;
+width: 20px;
+height: 20px;
+left: 0;
+top: 0;
+
+/* Vector */
+
+position: absolute;
+left: 26.04%;
+right: 26.04%;
+top: 5.21%;
+bottom: 46.87%;
+background: #747887;
+
+/* Vector */
+
+position: absolute;
+left: 11.08%;
+right: 11.08%;
+top: 59.38%;
+bottom: 5.21%;
+background: #747887;
+
+/* Vector */
+
+position: absolute;
+left: 0;
+right: 0;
+top: 0;
+bottom: 0;
+opacity: 0;

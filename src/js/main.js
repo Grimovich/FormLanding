@@ -6,6 +6,7 @@ function stepForm() {
     const form = document.querySelector(".steps__form");
     const stepNumbers = document.querySelectorAll(".step__number");
     const progress = document.querySelector(".progress__success");
+    const finishBlock = document.querySelector(".finish");
 
     form.addEventListener("submit", (e) => e.preventDefault());
 
@@ -19,8 +20,10 @@ function stepForm() {
     });
 
     nextBtn.addEventListener("click", () => {
-        formStepIndex++;
-        updateFormSteps();
+        if (formStepIndex < steps.length - 1) {
+            formStepIndex++;
+            updateFormSteps();
+        }
     });
 
     function updateFormSteps() {
@@ -39,10 +42,24 @@ function stepForm() {
 
         if (formStepIndex === steps.length - 1) {
             nextBtn.innerHTML = "Finish";
+
+            nextBtn.addEventListener("click", () => {
+                finishBlock.style.display = "block";
+                form.style.display = "none";
+            });
         } else {
             nextBtn.innerHTML = "Next";
         }
+
+        const actives = document.querySelectorAll(".active__number");
+        const percent =
+            ((actives.length - 1) / (stepNumbers.length - 1)) * 100 + "%";
+
+        progress.style.width = percent;
     }
     updateFormSteps();
 }
-stepForm();
+
+if (document.querySelector(".form__step")) {
+    stepForm();
+}
