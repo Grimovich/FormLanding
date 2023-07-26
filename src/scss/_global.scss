@@ -1,0 +1,111 @@
+// Container
+.container {
+  width: 100%;
+  max-width: ($containerWidth + $containerPadding) + px;
+  margin: 0 auto;
+  padding: 0 $containerSidePadding + px;
+
+  @media (max-width: $breakpoint1450) {
+    max-width: 1200px;
+  }
+
+  @media (max-width: $breakpoint992) {
+    max-width: 970px;
+  }
+
+  @media (max-width: $breakpoint768) {
+    max-width: 740px;
+  }
+
+  @media (max-width: $breakpoint480) {
+    max-width: none;
+  }
+}
+
+// Body Locked
+body {
+  font-family: "Author", sans-serif;
+  &.locked {
+    overflow: hidden;
+  }
+}
+// Animations
+// Fade
+.section {
+  // .section__title
+  &__title {
+    color: $blue;
+
+    font-size: 50px;
+    font-weight: 494;
+    font-style: normal;
+    line-height: 56px;
+  }
+
+  // .section__text
+  &__text {
+    color: $gray;
+
+    font-size: 20px;
+    font-weight: 375;
+    font-style: normal;
+    line-height: 22px;
+    max-width: 600px;
+  }
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+
+  max-width: fit-content;
+  padding: 18px 48px;
+
+  color: $white;
+  background: $red;
+
+  font-size: 22px;
+  font-weight: 494;
+  font-style: normal;
+  line-height: 24px;
+
+  gap: 40px;
+
+  svg {
+    transition: 0.3s all ease;
+  }
+
+  &:hover {
+    transition: 0.3s all ease;
+
+    background: rgb(161, 1, 1);
+
+    svg {
+      transform: translate(10px);
+    }
+  }
+}
+
+main {
+  padding: 50px 200px;
+}
+
+.btn__outline {
+  padding: 18px 48px;
+
+  color: $blue;
+  border: 1px solid $lightgray;
+  background: $white;
+
+  font-size: 22px;
+  font-weight: 494;
+  font-style: normal;
+  line-height: 24px;
+
+  &:hover {
+    transition: 0.3s all ease;
+
+    color: $white;
+    background: $blue;
+  }
+}

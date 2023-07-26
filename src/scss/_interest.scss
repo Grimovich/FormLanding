@@ -1,0 +1,51 @@
+.interests {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.interest {
+  // .interest__item
+
+  &__item {
+    display: flex;
+    padding: 15px 24px;
+    background: $white;
+    border: 1px solid $lightgray;
+    margin-top: 20px;
+    cursor: pointer;
+    position: relative;
+  }
+
+  // .interest__checkbox
+  &__checkbox {
+    display: none;
+
+    &:checked ~ .interest__text {
+      color: $blue;
+    }
+
+    &:checked ~ .interest__border {
+      opacity: 1;
+    }
+  }
+
+  // .interest__text
+  &__text {
+    font-style: normal;
+    font-size: 18px;
+    font-weight: 494;
+    line-height: 20px;
+    color: $gray;
+  }
+
+  // .interest__border
+  &__border {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 0;
+    border: 1px solid $blue;
+  }
+}
