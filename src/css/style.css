@@ -775,17 +775,37 @@ main {
 }
 
 .description__input {
-  -webkit-box-align: start;
-  align-items: start;
-  -ms-flex-align: start;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 
   max-width: 930px;
   height: 240px;
   margin-top: 5px;
 
-  text-align: justify;
-
   border: 1px solid #e5e4e1;
+}
+
+.self__input {
+  width: 100%;
+  max-width: 930px;
+  height: 240px;
+  padding: 20px;
+
+  resize: none;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+
+  color: #747887;
+  border: 1px solid #e5e4e1;
+  outline: none;
+
+  font-size: 18px;
+  font-weight: 375;
+  font-style: normal;
+}
+.self__input:focus {
+  outline: 1px solid #eb3d35;
 }
 
 .finish {
